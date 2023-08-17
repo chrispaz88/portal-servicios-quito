@@ -1,45 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Servicios de Quito</title>
-    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
 </head>
-
 <body>
-    <header>
-        <img src="assets/images/Logo-Portal.png" alt="Logo" class="me-3" />
-        <nav class="flex items-center justify-center bg-blue-500">
-            <a class="nav-link border-2 border-white border-opacity-100 bg-opacity-0 rounded-lg px-4 py-2 m-2"
-                href="#">Institucional</a>
-            <a class="nav-link border-2 border-white border-opacity-100 bg-opacity-0 rounded-lg px-4 py-2 m-2"
-                href="#">Trámites</a>
-            <a class="nav-link border-2 border-white border-opacity-100 bg-opacity-0 rounded-lg px-4 py-2 m-2"
-                href="#">Denuncias Quito Honesto</a>
-            <a class="nav-link border-2 border-white border-opacity-100 bg-opacity-0 rounded-lg px-4 py-2 m-2"
-                href="#">Municipio en tu Barrio</a>
-            <a class="nav-link border-2 border-white border-opacity-100 bg-opacity-0 rounded-lg px-4 py-2 m-2"
-                href="#">Guías de Usuario</a>
-        </nav>
-    </header>
 
-    <div class="container mt-4">
-        <div class="relative">
-            <img src="assets/images/panecillo.png" alt="Panecillo" class="w-full" />
+    <header>
+        <img src="assets/images/Logo-Portal.png" alt="Logo" class="me-3">
+        <nav class="bg-242D5F border border-white w-screen">
+            <ul class="flex">
+                <li class="relative group flex-1">
+                    <a href="#" class="block px-4 py-9 text-center text-white font-semibold uppercase text-iek-web border-r border-white
+                    transition-all duration-300 hover:bg-4A74A3 hover:text-white">Institucional</a>
+                </li>
+                <li class="relative group flex-1">
+                    <a href="#" class="block px-4 py-9 text-center text-white font-semibold uppercase text-iek-web border-r border-white
+                    transition-all duration-300 hover:bg-4A74A3 hover:text-white">Trámites</a>
+                    <!-- <li class="relative group flex-1"></li>-->
+                    <ul class="text-black text-iek-web hidden absolute bg-F6F6F6 opacity-90 border border-gray-300 rounded-lg group-hover:block z-10">
+                        <!-- Agrega las opciones en una fila -->
+                        <div class="flex flex-wrap -mx-4 p-4">
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Consulta de Obligaciones</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Pago con tarjeta de Crédito</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Lugares de pago Impuesto Predial 2023</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Exoneración de Impuesto Predial para Personas Adultas</a>
+                            <!-- Agrega más opciones aquí -->
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Facilidades de Pago</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Certificados en Línea</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Consulta de Trámites en Línea</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Presentación de Acuerdo de Responsabilidad y uso de medios electrónicos</a>
+                            <!-- Agrega más opciones aquí -->
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">LUAE Digital</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Declaración en Línea Patente y 1.5 x mil</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Transferencia de dominio</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Sistema Sitra</a>
+                            <!-- Agrega más opciones aquí -->
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Consulta de recaudaciones bancarias</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Incremento de Pisos</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Informe de Regulación Metropolitana (IRM) - Cédula Catastral</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Informe de Compatibilidad de Uso de Suelo(ICUS)</a>
+                            <!-- Agrega más opciones aquí -->
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Emisión Automática de Informes de Accidentes</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Validador Propiedad Horizontal</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Anexos de Reclamos o Peticiones Administrativas</a>
+                            <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Verificación de Documentos Emitidos</a>
+                            <!-- Agrega más opciones aquí -->
+                            <a class="w-full md:w-1/3 lg:w-1/3 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#">Sistema Metropolitano de Seguimiento de Recomendaciones</a>
+                        </div>
+                    </ul>
+                </li>
+                <li class="relative group flex-1">
+                    <a href="#" class="block px-4 py-9 text-center text-white font-semibold uppercase text-iek-web border-r border-white
+                    transition-all duration-300 hover:bg-4A74A3 hover:text-white">Denuncias Quito Honesto</a>
+                </li>
+                </li>
+                <li class="relative group flex-1">
+                    <a href="#" class="block px-4 py-9 text-center text-white font-semibold uppercase text-iek-web border-r border-white
+                    transition-all duration-300 hover:bg-4A74A3 hover:text-white">Municipio en tu Barrio</a>
+                </li>
+                <li class="relative group flex-1">
+                    <a href="#" class="block px-4 py-9 text-center text-white font-semibold uppercase text-iek-web 
+                    transition-all duration-300 hover:bg-4A74A3 hover:text-white">Guías de Usuario</a>
+                </li>
+            </ul>
+        </nav>
+
+        
+    </header>
+    
+    <div class="container">
+        <div class="relative w-screen jus flex">
+            <img src="assets/images/panecillo.png" alt="Panecillo" class="w-screen jus">
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div class="flex">
-                    <input type="text" class="w-2/3 px-4 py-2 border rounded-l-lg" placeholder="Buscar..." />
-                    <button class="w-1/3 px-4 py-2 bg-blue-500 text-white font-semibold rounded-r-lg" type="button">
-                        Buscar
+                <div class="flex opacity-90 ">
+                    <input type="text" class="w-96 px-4 py-2 border rounded-l-full" placeholder="Buscar trámites y servicios">
+                    <button class="px-4 py-2 bg-white text-858282 font-semibold rounded-r-full flex items-center" type="button">
+                        <i class="fas fa-search"></i></span>
                     </button>
                 </div>
             </div>
-        </div>
-
-        <div class="mt-4">
-            <!-- Aquí puedes agregar los 16 bloques de contenido -->
         </div>
     </div>
 
@@ -47,13 +92,12 @@
         <div class="parent grid grid-cols-5 grid-rows-2">
         <div class="div1 bg-blue-500 text-white p-4">Div 1</div>
         <div class="div2 bg-green-500 text-white p-4">Div 2</div>
-        <div class="div4 bg-purple-500 text-white p-4">Div 3</div>
+        <div class="div4 bg-purple-500 text-white p-4">Div 3          d</div>
         <div class="div3 bg-red-500 text-white col-span-2 p-4">Div 4</div>
         </div>
         <p>Contacto: correo@ejemplo.com</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 </body>
 
 </html>

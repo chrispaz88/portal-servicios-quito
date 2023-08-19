@@ -5,10 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portal de Servicios de Quito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilos.css" />
 </head>
 
-<body>
+<body class="font-principal">
     <header>
         <img src="assets/images/Logo-Portal.png" alt="Logo" class="me-3" />
         <nav class="flex items-center justify-center bg-blue-500">
@@ -25,7 +28,7 @@
         </nav>
     </header>
 
-    <div class="container mt-4">
+    <div class="">
         <div class="relative">
             <img src="assets/images/panecillo.png" alt="Panecillo" class="w-full" />
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -37,20 +40,97 @@
                 </div>
             </div>
         </div>
-
-        <div class="mt-4">
-            <!-- Aquí puedes agregar los 16 bloques de contenido -->
-        </div>
     </div>
+    <!-- Footer container -->
+    <footer class="bg-neutral-100 text-center dark:bg-neutral-600 lg:text-left">
+        <div class="p-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 justify-items-center">
+                <!--First links section-->
+                <div class="mb-6">
+                    <h5 class="mb-10 font-bold uppercase text-neutral-800 dark:text-neutral-200">
+                        Municipio
+                    </h5>
 
-    <footer class="mt-5 text-center footer">
-        <div class="parent grid grid-cols-5 grid-rows-2">
-        <div class="div1 bg-blue-500 text-white p-4">Div 1</div>
-        <div class="div2 bg-green-500 text-white p-4">Div 2</div>
-        <div class="div4 bg-purple-500 text-white p-4">Div 3</div>
-        <div class="div3 bg-red-500 text-white col-span-2 p-4">Div 4</div>
+                    <ul class="mb-0 list-none">
+                        <li>
+                            <a href="#!" class="ul-element">El Alcalde</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="ul-element">Integrantes Concejo Metropolitano</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="ul-element">Ordenanzas y reglamentos</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="ul-element">Politica Antisborno</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="ul-element">Politica de tratamiento de
+                                datos</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--Second links section-->
+                <div class="mb-6">
+                    <h5 class="mb-10 font-bold uppercase text-neutral-800 dark:text-neutral-200">
+                        Contacto
+                    </h5>
+
+                    <ul class="mb-0 list-none">
+                        <li>
+                            <a href="#!" class="ul-element">Venezuela entre Chile y
+                                Espejo</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="ul-element">Palacio Municipal</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="ul-element">PLaza Carlos Andrade Marin</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="ul-element">PBX: (593-2) 3952300</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="ul-element">Call Center 1800 510 510 o
+                                101</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--Third links section-->
+                <div class="mb-6">
+                    <h5 class="mb-10 font-bold uppercase text-neutral-800 dark:text-neutral-200">
+                        Siguenos
+                    </h5>
+
+                    <ul class="mb-0 list-none">
+                        <li>
+                            <a href="#!" class="ul-element">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="ul-element">Link 2</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!--Fourth links section-->
+                <div class="mb-6">
+                    <h5 class="mb-10 font-bold uppercase text-neutral-800 dark:text-neutral-200">
+                        Links
+                    </h5>
+
+                </div>
+            </div>
         </div>
-        <p>Contacto: correo@ejemplo.com</p>
+
+        <!--Copyright section-->
+        <div class="bg-neutral-200 p-4 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
+            © 2023 Copyright:
+            <a class="text-neutral-800 dark:text-neutral-400" href="https://tailwind-elements.com/">Tailwind
+                Elements</a>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>

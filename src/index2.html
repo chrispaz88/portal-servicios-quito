@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Desplegar Opciones</title>
+  <style>
+    #opciones {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="mostrarOpciones">Mostrar Opciones</button>
+  <div id="opciones">
+    <p>Opción 1</p>
+    <p>Opción 2</p>
+    <p>Opción 3</p>
+  </div>
+
+  <script>
+    const botonMostrar = document.getElementById("mostrarOpciones");
+    const opciones = document.getElementById("opciones");
+    let opcionesMostradas = false;
+
+    botonMostrar.addEventListener("click", () => {
+      if (!opcionesMostradas) {
+        opciones.style.display = "block";
+        opcionesMostradas = true;
+      } else {
+        opciones.style.display = "none";
+        opcionesMostradas = false;
+      }
+    });
+  </script>
+</body>
+</html>

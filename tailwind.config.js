@@ -15,6 +15,12 @@ module.exports = {
       fontFamily: {
         'iek-web': ['iek web', 'sans-serif'],
       },
+      fontSize: {
+        'xl': '.1.438rem',
+        'small': '.875rem',
+        '3xs': '.555rem',
+        '4xs': '.215rem',
+      },
     },
   },
   plugins: [],

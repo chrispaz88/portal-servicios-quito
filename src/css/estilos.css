@@ -568,6 +568,24 @@ video {
   }
 }
 
+.opcNavMenuEffect {
+  border-right-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.opcNavMenuEffect:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 116 163 / var(--tw-bg-opacity));
+}
+
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -594,6 +612,22 @@ video {
 
 .top-1\/2 {
   top: 50%;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
+.bottom-14 {
+  bottom: 3.5rem;
+}
+
+.right-14 {
+  right: 3.5rem;
 }
 
 .z-10 {
@@ -683,6 +717,26 @@ video {
   height: 100%;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
+.h-60 {
+  height: 15rem;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.max-h-14 {
+  max-height: 3.5rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -731,6 +785,10 @@ video {
   width: 100vw;
 }
 
+.w-20 {
+  width: 5rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -770,6 +828,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-4 {
+  --tw-translate-y: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -784,6 +847,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -818,6 +885,18 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .rounded {
@@ -895,12 +974,25 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
 .p-1 {
   padding: 0.25rem;
 }
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-14 {
+  padding: 3.5rem;
 }
 
 .px-4 {
@@ -922,9 +1014,18 @@ video {
   text-align: center;
 }
 
+.align-text-bottom {
+  vertical-align: text-bottom;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -959,6 +1060,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -973,11 +1080,6 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
 }
 
 .hover\:scale-105:hover {
@@ -1006,6 +1108,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:w-1\/3 {
     width: 33.333333%;
   }
@@ -1022,5 +1128,9 @@ video {
 
   .lg\:w-1\/4 {
     width: 25%;
+  }
+
+  .lg\:flex-auto {
+    flex: 1 1 auto;
   }
 }

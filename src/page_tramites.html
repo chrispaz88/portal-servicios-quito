@@ -11,16 +11,6 @@
 </head>
 <body>
     <div class="flex justify-end mt-20 me-3 space-x-2 absolute top-0 right-0">
-<<<<<<< HEAD
-        <button aria-label="Aria Name" id="traductorBut" class="w-14 h-14 bg-red-500 text-white rounded-full flex items-center justify-center">
-            <img class="w-10 h-10" src="assets/images/iconTraductor.png" alt="Opcion para cambiar idioma">
-        </button>
-        <button aria-label="Aria Name" id="accessBut" class="w-14 h-14 bg-red-500 text-white rounded-full flex items-center justify-center">
-            <img class="w-24 h-16" src="assets/images/iconperson.png" alt="Opcion para cambiar contraste">
-        </button>
-        <button aria-label="Aria Name" id="leerBut" class="w-14 h-14 bg-red-500 text-white rounded-full flex items-center justify-center">
-            <img class="w-6 h-6" src="assets/images/iconLeer.png" alt="Opcion para Leer Contenido">
-=======
         <button id="traductorBut" class="w-14 h-14 bg-red-500 text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform">
             <img class="w-10 h-10" src="assets/images/iconTraductor.png">
         </button>
@@ -29,7 +19,6 @@
         </button>
         <button id="leerBut" class="w-14 h-14 bg-red-500 text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform">
             <img class="w-6 h-6" src="assets/images/iconLeer.png">
->>>>>>> 0fe820cee432b4f93d002fe8a6902d0d45684199
         </button>
     </div>
     <ul id="opctraductor" class=" hidden w-32 right-0 -translate-x-40 translate-y-28 text-black text-iek-web absolute bg-F6F6F6 opacity-90 border border-gray-300 rounded-lg group-hover:block z-10">
@@ -124,7 +113,7 @@
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div class="flex opacity-90 ">
                     <input type="text" class="w-96 px-4 py-2 border rounded-l-full" placeholder="Buscar trámites y servicios">
-                    <button aria-label="Aria Name" class="px-4 py-2 bg-white text-858282 font-semibold rounded-r-full flex items-center" type="button">
+                    <button class="px-4 py-2 bg-white text-858282 font-semibold rounded-r-full flex items-center" type="button">
                         <i class="fas fa-search"></i></span>
                     </button>
                 </div>
@@ -209,42 +198,40 @@
         </button>
       </div> 
 
-      <section>
+      <footer>
         <div class="flex justify-center items-center mt-4">
             <div class="bg-0D2BD2 p-1 w-1/3"></div>
             <div class="bg-E3292F p-1 w-1/3"></div>
             <div class="bg-0D2BD2 p-1 w-1/3"></div>
         </div>
-      </section>
-      <footer class="relative bg-cover bg-center h-full" style="background-image: url(./assets/images/backggroundfooter.jpeg);">
-        <div class="flex sm:justify-around md:justify-around lg:justify-between">
-          <div class="text-white mx-2 flex gap-4 justify-center items-start px-6 py-10 lg:mx-20 px-0">
-              <div class="col-span-1 flex flex-col items-center">
-                  <h2 class="text-lg font-semibold">Municipio</h2>
-                  <div class="bg-E3292F p-1 w-1/3"></div>
-                  <ul class="mt-2 text-small">
-                      <li>El Alcalde</li>
-                      <li>Integrantes Consejo Cantonal</li>
-                      <li>Ordenanzas y Reglamentos</li>
-                      <li>Politica Antisoborno</li>
-                      <li>Politica de tratamiento de datos</li>
-                  </ul>
-              </div>
-              <div class="col-span-1 flex flex-col items-center">
-                  <h2 class="text-lg font-semibold">Contacto</h2>
-                  <div class="bg-E3292F p-1 w-1/3"></div>
-                  <ul class="mt-2 text-small">
-                      <li>Venezuela entre Chile y Espejo</li>
-                      <li>Palacio Municipal</li>
-                      <li>Plaza Carlos Andrade Marin</li>
-                      <li>PBX: (593-2) 3952300</li>
-                      <li>Call Center 1800 520 o 101</li>
-                  </ul>
-              </div>
-              <div class="col-span-1 flex flex-col items-start">
-                  <h2 class="text-lg font-semibold">Siguenos</h2>
-                  <div class="bg-E3292F p-1 w-1/3"></div>
-                  <ul class="mt-2">
+        <footer class="bg-242D5F relative">
+            <div class="container text-white mx-auto grid grid-cols-4 gap-4">
+                <div class="col-span-1 flex flex-col items-center">
+                    <h2 class="text-lg font-semibold">Municipio</h2>
+                    <div class="bg-E3292F p-1 w-1/3"></div>
+                    <ul class="mt-2">
+                        <li>El Alcalde</li>
+                        <li>Integrantes Consejo Cantonal</li>
+                        <li>Ordenanzas y reglamentos</li>
+                        <li>Politica Antisoborno</li>
+                        <li>Politica de tratamiento de datos</li>
+                    </ul>
+                </div>
+                <div class="col-span-1 flex flex-col items-center">
+                    <h2 class="text-lg font-semibold">Contacto</h2>
+                    <div class="bg-E3292F p-1 w-1/3"></div>
+                    <ul class="mt-2">
+                        <li>Venezuela entre Chile y Espejo</li>
+                        <li>Palacio Municipal</li>
+                        <li>Plaza Carlos Andrade Marin</li>
+                        <li>PBX: (593-2) 3952300</li>
+                        <li>Call Center 1800 520 o 101</li>
+                    </ul>
+                </div>
+                <div class="col-span-1 flex flex-col items-center">
+                    <h2 class="text-lg font-semibold">Siguenos</h2>
+                    <div class="bg-E3292F p-1 w-1/3"></div>
+                    <ul class="mt-2">
                       <li>
                         <button class="hover:scale-105 transition-transform">
                           <img class="w-14 h-14" src="assets/images/iconWhatssap.png" alt="Icono WhatsApp">
@@ -255,17 +242,22 @@
                         <img class="w-12 h-12" src="assets/images/iconfb.png" alt="Icono Facebook">
                       </button>
                     </li>
-                  </ul>
-              </div>
-          </div>
-          <div class="max-[810px]:hidden col-span-1 max-sm:w-40 sm:w-48 md:w-64 lg:w-80 mx-2 flex gap-4 justify-end items-end">
-            <div class="">
-              <img class="w-full" src="./assets/images/bannerPrincipal_2.png" alt="">
-            </div>  
-          </div>
-        </div>
+                    </ul>
+                </div>
+                <div class="absolute bottom-0 right-0 h-full">
+                    <img class="h-full" src="assets/images/logoFooter.png" alt="Logo footer"> 
+                </div>
+            </div>
+            <div class="flex justify-center items-center mt-20">
+                <div class="bg-242D5F p-1 w-screen"></div>
+            </div>
+        </footer>
 
-      </footer>
+        <div class="relative flex justify-end items-end">
+          <button id="chatbotBut" class="fixed bottom-4 right-4 rounded-full hover:scale-105 transition-transform">
+            <img class="w-24 h-24" src="assets/images/">
+        </button>
+        </div>
         
 </body>
 

@@ -18,32 +18,101 @@
             <img class="w-24 h-16" src="assets/images/iconperson.png">
         </button>
         <button id="leerBut" class="w-14 h-14 bg-red-500 text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform">
-            <img class="w-6 h-6" src="assets/images/iconLeer.png">
-        </button>
+          <img id="iconImage" class="w-10 h-10" src="assets/images/iconMute.png">   
+      </button>
+      
+      <script>
+          const iconImage = document.getElementById('iconImage');
+          const leerButton = document.getElementById('leerBut');
+          let isMuted = true;
+      
+          iconImage.addEventListener('click', () => {
+              if (isMuted) {
+                  const newImageSrc = 'assets/images/iconLeer.png';
+                  iconImage.src = newImageSrc;
+                  leerButton.classList.add('bg-blue-500');
+              } else {
+                  const originalImageSrc = 'assets/images/iconMute.png';
+                  iconImage.src = originalImageSrc;
+                  leerButton.classList.remove('bg-blue-500');
+              }
+      
+              isMuted = !isMuted;
+          });
+      </script>
     </div>
     <ul id="opctraductor" class=" hidden w-32 right-0 -translate-x-40 translate-y-28 text-black text-iek-web absolute bg-F6F6F6 opacity-90 border border-gray-300 rounded-lg group-hover:block z-10">
-        <div class="p-4">
-            <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">Opc1</a>
-            <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">opc2</a>
-            <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">opc3</a>
+      <div class="p-4">
+        <h1 class="text-black font-bold">Idioma</h1>
+        <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+            <span style="display: flex; align-items: center;">
+                <img src="assets/images/banderaEcu.png" alt="Español" style="width: 25px; height: 20px;" />
+                <span style="margin-left: 8px;">Español</span>
+            </span>
+        </a>
+        <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+          <span style="display: flex; align-items: center;">
+              <img src="assets/images/banderaKiwcha.png" alt="Kiwcha" style="width: 25px; height: 20px;" />
+              <span style="margin-left: 8px;">Kiwcha</span>
+          </span>
+        </a>
+        <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+          <span style="display: flex; align-items: center;">
+              <img src="assets/images/banderaUsa.png" alt="Inglés" style="width: 25px; height: 20px;" />
+              <span style="margin-left: 8px;">Inglés</span>
+          </span>
+        </a>
         </div>
     </ul>
     
-    <ul id="opcAccess" class="hidden w-32 right-0 -translate-x-24 translate-y-28 text-black text-iek-web absolute bg-F6F6F6 opacity-90 border border-gray-300 rounded-lg group-hover:block z-10">
+    <ul id="opcAccess" class="hidden w-40 right-0 -translate-x-24 translate-y-28 text-black text-iek-web absolute bg-F6F6F6 opacity-90 border border-gray-300 rounded-lg group-hover:block z-10">
         <div class="p-4">
-            <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">Opc1</a>
-            <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">opc2</a>
-            <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">opc3</a>
-        </div>
+          <h1 class="text-black font-bold">Accesibilidad</h1>
+          <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+              <span style="display: flex; align-items: center;">
+                  <img src="assets/images/contrastNormal.png" alt="Español" style="width: 20px; height: 20px;" />
+                  <span style="margin-left: 2px;">Contraste normal</span>
+              </span>
+          </a>
+          <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+            <span style="display: flex; align-items: center;">
+                <img src="assets/images/contrastAlto.png" alt="Español" style="width: 20px; height: 20px;" />
+                <span style="margin-left: 2px;">Alto contraste</span>
+            </span>
+          </a>
+          <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+            <span style="display: flex; align-items: center;">
+                <img src="assets/images/contrastNegativo.png" alt="Español" style="width: 20px; height: 20px;" />
+                <span style="margin-left: 2px;">Contraste negativo</span>
+            </span>
+          </a>
+          <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+            <span style="display: flex; align-items: center;">
+                <img src="assets/images/contrastBajo.png" alt="Español" style="width: 20px; height: 20px;" />
+                <span style="margin-left: 2px;">Bajo contraste</span>
+            </span>
+          </a>
+        <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+          <span style="display: flex; align-items: center;">
+              <img src="assets/images/sizeLetter.png" alt="Español" style="width: 14px; height: 14px;" />
+              <span style="margin-left: 2px;">Texto normal</span>
+          </span>
+        </a>
+        <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+          <span style="display: flex; align-items: center;">
+              <img src="assets/images/sizeLetter.png" alt="Español" style="width: 18px; height: 18px;" />
+              <span style="margin-left: 2px;">Texto mediano</span>
+          </span>
+        </a>
+        <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+          <span style="display: flex; align-items: center;">
+              <img src="assets/images/sizeLetter.png" alt="Español" style="width: 24px; height: 24px;" />
+              <span style="margin-left: 2px;">Texto grande</span>
+          </span>
+        </a>
+      </div>
     </ul>
     
-    <ul id="opcLeer" class="hidden w-32 right-0 -translate-x-10 translate-y-28 text-black text-iek-web absolute bg-F6F6F6 opacity-90 border border-gray-300 rounded-lg group-hover:block z-10">
-        <div class="p-4">
-            <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">Opc1</a>
-            <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">opc2</a>
-            <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">opc3</a>
-        </div>
-    </ul>
 
     <header>
         <img src="assets/images/Logo-Portal.png" alt="Logo del Municipio Metropolitano de Quito" class="me-3">
@@ -260,7 +329,6 @@
           <img class="w-24 h-24" src="assets/images/ChatBot.png">
       </button>
       </div>
-        
 </body>
 
 </html>

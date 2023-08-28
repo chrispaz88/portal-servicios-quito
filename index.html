@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Servicios de Quito</title>
-    <link rel="icon" href="assets/images/iconLink.png" type="image/png">
-    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="icon" href="src/src/assets/images/iconLink.png" type="image/png">
+    <link rel="stylesheet" href="./src/css/estilos.css">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <script src="./js/toglgle.js"></script>
+    <script src="src/js/toglgle.js"></script>
 </head>
 <body>
     <div class="flex justify-end mt-20 me-3 space-x-2 absolute top-0 right-0">
@@ -29,11 +29,11 @@
       
           iconImage.addEventListener('click', () => {
               if (isMuted) {
-                  const newImageSrc = 'assets/images/iconLeer.png';
-                  iconImage.src = newImageSrc;
+                const newImageSrc = 'src/assets/images/iconLeer.png';
+                iconImage.src = newImageSrc;
                   leerButton.classList.add('bg-blue-500');
               } else {
-                  const originalImageSrc = 'assets/images/iconMute.png';
+                  const originalImageSrc = 'src/assets/images/iconMute.png';
                   iconImage.src = originalImageSrc;
                   leerButton.classList.remove('bg-blue-500');
               }
@@ -47,19 +47,19 @@
         <h1 class="text-black font-bold" alt="ventana para seleccionar Idioma">Idioma</h1>
         <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
             <span style="display: flex; align-items: center;">
-                <img src="assets/images/banderaEcu.png" alt="cambiar al idioma Español" style="width: 25px; height: 20px;" />
+                <img src="src/assets/images/banderaEcu.png" alt="cambiar al idioma Español" style="width: 25px; height: 20px;" />
                 <span style="margin-left: 8px;" >Español</span>
             </span>
         </a>
         <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
           <span style="display: flex; align-items: center;">
-              <img src="assets/images/banderaKiwcha.png" alt="cambiar al idioma Kiwcha" style="width: 25px; height: 20px;" />
+              <img src="src/assets/images/banderaKiwcha.png" alt="cambiar al idioma Kiwcha" style="width: 25px; height: 20px;" />
               <span style="margin-left: 8px;">Kiwcha</span>
           </span>
         </a>
         <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
           <span style="display: flex; align-items: center;">
-              <img src="assets/images/banderaUsa.png" alt="cambiar al idioma Inglés" style="width: 25px; height: 20px;" />
+              <img src="src/assets/images/banderaUsa.png" alt="cambiar al idioma Inglés" style="width: 25px; height: 20px;" />
               <span style="margin-left: 8px;">Inglés</span>
           </span>
         </a>
@@ -71,43 +71,43 @@
           <h1 class="text-black font-bold">Accesibilidad</h1>
           <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
               <span style="display: flex; align-items: center;">
-                  <img src="assets/images/contrastNormal.png" alt="Cambiar a contraste normal" style="width: 20px; height: 20px;" />
+                  <img src="src/assets/images/contrastNormal.png" alt="Cambiar a contraste normal" style="width: 20px; height: 20px;" />
                   <span style="margin-left: 2px;">Contraste normal</span>
               </span>
           </a>
           <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
             <span style="display: flex; align-items: center;">
-                <img src="assets/images/contrastAlto.png" alt="Cambiar a Alto contraste" style="width: 20px; height: 20px;" />
+                <img src="src/assets/images/contrastAlto.png" alt="Cambiar a Alto contraste" style="width: 20px; height: 20px;" />
                 <span style="margin-left: 2px;">Alto contraste</span>
             </span>
           </a>
           <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
             <span style="display: flex; align-items: center;">
-                <img src="assets/images/contrastNegativo.png" alt="Cambiar a Contraste negativo" style="width: 20px; height: 20px;" />
+                <img src="src/assets/images/contrastNegativo.png" alt="Cambiar a Contraste negativo" style="width: 20px; height: 20px;" />
                 <span style="margin-left: 2px;">Contraste negativo</span>
             </span>
           </a>
           <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
             <span style="display: flex; align-items: center;">
-                <img src="assets/images/contrastBajo.png" alt="Cambiar a Bajo contraste" style="width: 20px; height: 20px;" />
+                <img src="src/assets/images/contrastBajo.png" alt="Cambiar a Bajo contraste" style="width: 20px; height: 20px;" />
                 <span style="margin-left: 2px;">Bajo contraste</span>
             </span>
           </a>
         <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
           <span style="display: flex; align-items: center;">
-              <img src="assets/images/sizeLetter.png" alt="Cambiar el tamaño del texto a texto normal" style="width: 14px; height: 14px;" />
+              <img src="src/assets/images/sizeLetter.png" alt="Cambiar el tamaño del texto a texto normal" style="width: 14px; height: 14px;" />
               <span style="margin-left: 2px;">Texto normal</span>
           </span>
         </a>
         <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
           <span style="display: flex; align-items: center;">
-              <img src="assets/images/sizeLetter.png" alt="Cambiar el tamaño del texto a texto mediano" style="width: 18px; height: 18px;" />
+              <img src="src/assets/images/sizeLetter.png" alt="Cambiar el tamaño del texto a texto mediano" style="width: 18px; height: 18px;" />
               <span style="margin-left: 2px;">Texto mediano</span>
           </span>
         </a>
         <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
           <span style="display: flex; align-items: center;">
-              <img src="assets/images/sizeLetter.png" alt="Cambiar el tamaño del texto a texto grande" style="width: 24px; height: 24px;" />
+              <img src="src/assets/images/sizeLetter.png" alt="Cambiar el tamaño del texto a texto grande" style="width: 24px; height: 24px;" />
               <span style="margin-left: 2px;">Texto grande</span>
           </span>
         </a>
@@ -123,7 +123,7 @@
       </style>
       
       <a href="index.html" class="image-link">
-        <img src="assets/images/Logo-Portal.png" alt="Logo del Municipio Metropolitano de Quito" class="me-3">
+        <img src="src/assets/images/Logo-Portal.png" alt="Logo del Municipio Metropolitano de Quito" class="me-3">
       </a>
     
         <nav class="bg-242D5F border w-screen" alt="Menu de navegación">
@@ -151,6 +151,7 @@
             </ul>
              <ul id="subopctramites" class="hidden w-1/2 translate-x-16 text-black text-iek-web absolute bg-F6F6F6 opacity-90 border border-gray-300 rounded-lg group-hover:block z-10" alt="Submenu de opciones de tramites">
                 <div class="flex flex-wrap -mx-4 p-4">
+<<<<<<< HEAD:src/index.html
                   <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Ir a Consulta de Obligaciones">Consulta de Obligaciones</a>
                   <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Ir a Pago con tarjeta de Crédito">Pago con tarjeta de Crédito</a>
                   <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Ir a Lugares de pago Impuesto Predial 2023">Lugares de pago Impuesto Predial 2023</a>
@@ -172,6 +173,29 @@
                   <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Ir a Anexos de Reclamos o Peticiones Administrativas">Anexos de Reclamos o Peticiones Administrativas</a>
                   <a class="w-full md:w-4/4 lg:w-4/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Ir a Verificación de Documentos Emitidos">Verificación de Documentos Emitidos</a>
                   <a class="w-full md:w-1/3 lg:w-1/3 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Ir a Sistema Metropolitano de Seguimiento de Recomendaciones">Sistema Metropolitano de Seguimiento de Recomendaciones</a>                  
+=======
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Consulta de Obligaciones">Consulta de Obligaciones</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Pago con tarjeta de Crédito">Pago con tarjeta de Crédito</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Lugares de pago Impuesto Predial 2023">Lugares de pago Impuesto Predial 2023</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Exoneración de Impuesto Predial para Personas Adultas">Exoneración de Impuesto Predial para Personas Adultas</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Facilidades de Pago">Facilidades de Pago</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="src/certOnline-page.html" title="Certificados en Línea">Certificados en Línea</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Consulta de Trámites en Línea">Consulta de Trámites en Línea</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Presentación de Acuerdo de Responsabilidad y uso de medios electrónicos">Presentación de Acuerdo de Responsabilidad y uso de medios electrónicos</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="LUAE Digital">LUAE Digital</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Declaración en Línea Patente y 1.5 x mil">Declaración en Línea Patente y 1.5 x mil</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Transferencia de dominio">Transferencia de dominio</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Sistema Sitra">Sistema Sitra</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Consulta de recaudaciones bancarias">Consulta de recaudaciones bancarias</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Incremento de Pisos">Incremento de Pisos</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Informe de Regulación Metropolitana (IRM) - Cédula Catastral">Informe de Regulación Metropolitana (IRM) - Cédula Catastral</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Informe de Compatibilidad de Uso de Suelo(ICUS)">Informe de Compatibilidad de Uso de Suelo(ICUS)</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Emisión Automática de Informes de Accidentes">Emisión Automática de Informes de Accidentes</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Validador Propiedad Horizontal">Validador Propiedad Horizontal</a>
+                  <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Anexos de Reclamos o Peticiones Administrativas">Anexos de Reclamos o Peticiones Administrativas</a>
+                  <a class="w-full md:w-4/4 lg:w-4/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Verificación de Documentos Emitidos">Verificación de Documentos Emitidos</a>
+                  <a class="w-full md:w-1/3 lg:w-1/3 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Sistema Metropolitano de Seguimiento de Recomendaciones">Sistema Metropolitano de Seguimiento de Recomendaciones</a>                  
+>>>>>>> 525398705c088428a18a36604f772cbb04ab152a:index.html
                 </div>
             </ul>
         </nav>  
@@ -186,6 +210,7 @@
 
 
     
+<<<<<<< HEAD:src/index.html
 <div class="container">
   <div class="relative w-screen jus flex">
       <img src="assets/images/panecillo.png" alt="Panecillo" class="w-screen jus" alt="Un paisaje del panecillo del el cielo y adijunto en la parte superior izquierda un sello del gobierno ecuatoriano">
@@ -200,23 +225,38 @@
   </div>
 </div>
 
+=======
+    <div class="container">
+        <div class="relative w-screen jus flex">
+            <img src="src/assets/images/panecillo.png" alt="Panecillo" class="w-screen jus" alt="Un paisaje del panecillo del el cielo y adijunto en la parte superior izquierda un sello del gobierno ecuatoriano">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div class="flex opacity-90 ">
+                    <input type="text" class="w-96 px-4 py-2 border rounded-l-full" placeholder="Buscar trámites y servicios">
+                    <button aria-label="Aria Name" class="px-4 py-2 bg-white text-858282 font-semibold rounded-r-full flex items-center" type="button">
+                        <i class="fas fa-search"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+>>>>>>> 525398705c088428a18a36604f772cbb04ab152a:index.html
 
 
     <div class="flex space-x-4 justify-center items-center mt-4">
         <button id="certificadoButton" class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-24" src="assets/images/IconCertificadoLinea.png" alt="Icono de una computadora con certificado en pantalla">
+          <img class="w-24 h-24" src="src/assets/images/IconCertificadoLinea.png" alt="Icono de una computadora con certificado en pantalla">
           <span class="text-black font-bold">Certificado en Linea</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-20" src="assets/images/iconPermiso.png" alt="Icono de una persona entregando permisos a otra">
+          <img class="w-24 h-20" src="src/assets/images/iconPermiso.png" alt="Icono de una persona entregando permisos a otra">
           <span class="text-black font-bold">Permisos de Funcionamiento</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-24" src="assets/images/IconCatastro.png" alt="Icono con una lupa y un mapa">
+          <img class="w-24 h-24" src="src/assets/images/IconCatastro.png" alt="Icono con una lupa y un mapa">
           <span class="text-black font-bold">Catastro</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-24" src="assets/images/IconTributaria.png" alt="Icono de una persona gestionando sus documentos">
+          <img class="w-24 h-24" src="src/assets/images/IconTributaria.png" alt="Icono de una persona gestionando sus documentos">
           <span class="text-black font-bold">Gestión Tributaria</span>
         </button>
       </div>
@@ -226,63 +266,64 @@
         const certificadoButton = document.getElementById('certificadoButton');
         certificadoButton.addEventListener('click', () => {
             // Redireccionar a la página "page_tramites.html"
-            window.location.href = 'certOnline-page.html';
+            window.location.href = 'src/certOnline-page.html';
         });
     </script>
 
       <div class="flex space-x-4 justify-center items-center mt-4">
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-20" src="assets/images/IconVivienda.png" alt="Icono de una pared en construccion">
+          <img class="w-24 h-20" src="src/assets/images/IconVivienda.png" alt="Icono de una pared en construccion">
           <span class="text-black font-bold">Territorio, Hábitat y Vivienda</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-20" src="assets/images/IconGestionInmuebles.png" alt="Icono de varias personas gestionando">
+          <img class="w-24 h-20" src="src/assets/images/IconGestionInmuebles.png" alt="Icono de varias personas gestionando">
           <span class="text-black font-bold">Gestión de Bienes Inmuebles</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-24" src="assets/images/IconFinanciera.png" alt="Icono de un hombre eternado realizando gestion financiera">
+          <img class="w-24 h-24" src="src/assets/images/IconFinanciera.png" alt="Icono de un hombre eternado realizando gestion financiera">
           <span class="text-black font-bold">Gestión Financiera</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-24" src="assets/images/IconRegistroPropiedad.png" alt="Icono de una hoja de papel blanca con dibujos de una casa un contrato a firmar">
+          <img class="w-24 h-24" src="src/assets/images/IconRegistroPropiedad.png" alt="Icono de una hoja de papel blanca con dibujos de una casa un contrato a firmar">
           <span class="text-black font-bold">Registro de la Propiedad</span>
         </button>
       </div>
 
+      
       <div class="flex space-x-4 justify-center items-center mt-4">
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-24" src="assets/images/IconObraPublica.png" alt="Icono de obrero">
+          <img class="w-24 h-24" src="src/assets/images/IconObraPublica.png" alt="Icono de obrero">
           <span class="text-black font-bold">Obras Públicas</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-20" src="assets/images/IconTransporte.png" alt="Icono de un transpoete amarillo">
+          <img class="w-24 h-20" src="src/assets/images/IconTransporte.png" alt="Icono de un transpoete amarillo">
           <span class="text-black font-bold">Transporte y Movilidad</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-24" src="assets/images/IconCultura.png" alt="Icono de tres personas de distinta etnia">
+          <img class="w-24 h-24" src="src/assets/images/IconCultura.png" alt="Icono de tres personas de distinta etnia">
           <span class="text-black font-bold">Cultura y Educación</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-24" src="assets/images/IconTurismo.png" alt="Icono del planeta tierra y equipaje">
+          <img class="w-24 h-24" src="src/assets/images/IconTurismo.png" alt="Icono del planeta tierra y equipaje">
           <span class="text-black font-bold">Turismo y Deporte</span>
         </button>
       </div>
 
       <div class="flex space-x-4 justify-center items-center mt-4">
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-20" src="assets/images/IconJuridico.png" alt="Icono de personas realizando una actividad juridica">
+          <img class="w-24 h-20" src="src/assets/images/IconJuridico.png" alt="Icono de personas realizando una actividad juridica">
           <span class="text-black font-bold">Jurídico y Atención Social</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-20 h-20" src="assets/images/IconSeguridad.png" alt="Icono de un candado con un entorno de seguridad">
+          <img class="w-20 h-20" src="src/assets/images/IconSeguridad.png" alt="Icono de un candado con un entorno de seguridad">
           <span class="text-black font-bold">Seguridad y Control Ciudadano</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-24" src="assets/images/iconAmbiente.png" alt="Icono de una mano con una hoja verde">
+          <img class="w-24 h-24" src="src/assets/images/iconAmbiente.png" alt="Icono de una mano con una hoja verde">
           <span class="text-black font-bold">Ambiente</span>
         </button>
         <button class="w-56 h-40 bg-F5F5F5 p-4 rounded shadow-md flex flex-col items-center space-y-2 hover:scale-105 transition-transform">
-          <img class="w-24 h-24" src="assets/images/IconTramtes.png" alt="Icono de un cojunto de papeles que representan mas tramites">
+          <img class="w-24 h-24" src="src/assets/images/IconTramtes.png" alt="Icono de un cojunto de papeles que representan mas tramites">
           <span class="text-black font-bold align-text-bottom">Más trámites</span>
         </button>
       </div> 
@@ -294,7 +335,7 @@
             <div class="bg-0D2BD2 p-1 w-1/3"></div>
         </div>
       </section>
-      <footer class="relative bg-cover bg-center h-full" style="background-image: url(./assets/images/backggroundfooter.jpeg);">
+      <footer class="relative bg-cover bg-center h-full" style="background-image: url(./src/assets/images/backggroundfooter.jpeg);">
         <div class="flex sm:justify-around md:justify-around lg:justify-between">
           <div class="text-white mx-2 flex gap-4 justify-center items-start px-6 py-10 lg:mx-20">
               <div class="col-span-1 flex flex-col items-center bg-242D5F">
@@ -325,12 +366,12 @@
                   <ul class="mt-2">
                       <li>
                         <button class="hover:scale-105 transition-transform">
-                          <img class="w-14 h-14" src="assets/images/iconWhatssap.png" alt="Icono WhatsApp">
+                          <img class="w-14 h-14" src="src/assets/images/iconWhatssap.png" alt="Icono WhatsApp">
                         </button>
                       </li>
                       <li>
                       <button class="hover:scale-105 transition-transform">
-                        <img class="w-12 h-12" src="assets/images/iconfb.png" alt="Icono Facebook">
+                        <img class="w-12 h-12" src="src/assets/images/iconfb.png" alt="Icono Facebook">
                       </button>
                     </li>
                   </ul>
@@ -338,7 +379,7 @@
           </div>
           <div class="max-[810px]:hidden col-span-1 max-sm:w-40 sm:w-48 md:w-64 lg:w-80 mx-2 flex gap-4 justify-end items-end">
             <div class="">
-              <img class="w-full" src="./assets/images/bannerPrincipal_2.png"  alt="Logo de Servicios Ciudadanos de la alcaldia de Quito">
+              <img class="w-full" src="./src/assets/images/bannerPrincipal_2.png"  alt="Logo de Servicios Ciudadanos de la alcaldia de Quito">
             </div>  
           </div>
         </div>
@@ -346,7 +387,7 @@
 
       <div class="relative flex justify-end items-end">
         <button id="chatbotBut" class="fixed bottom-4 right-4 rounded-full hover:scale-105 transition-transform">
-          <img class="w-24 h-24" src="assets/images/ChatBot.png" alt="Un robot dentro de un boton rojo">
+          <img class="w-24 h-24" src="src/assets/images/ChatBot.png" alt="Un robot dentro de un boton rojo">
       </button>
       </div>
 </body>

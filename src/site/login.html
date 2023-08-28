@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="md:justify-between flex max-md:flex-col justify-center items-center text-center space-y-4">
                                     <a href="#" class="text-E3C34D font-semibold hover:text-red-500">Crear Cuenta</a>
-                                    <button type="submit" class="bg-indigo-700 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 font-semibold">Iniciar Sesion</button>
+                                    <button id="login-button" type="submit" class="bg-indigo-700 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 font-semibold">Iniciar Sesion</button>
                                 </div>
                             </form>
                         </div>
@@ -90,6 +90,7 @@
     const togglePasswordButton = document.getElementById("togglePassword");
     const passwordInput = document.getElementById("password");
 
+
     togglePasswordButton.addEventListener("click", function () {
         if (passwordInput.type === "password") {
         passwordInput.type = "text";
@@ -99,6 +100,14 @@
         togglePasswordButton.innerHTML = '<i class="far fa-eye text-gray-500 cursor-pointer"></i>';
         }
     });
+
+    const certificadoButton = document.getElementById('login-button');
+    certificadoButton.addEventListener('click', () => {
+        window.location.href = '../certOnline-page-logged.html';
+    });
+
+
+
   </script>
 </body>
 </html>

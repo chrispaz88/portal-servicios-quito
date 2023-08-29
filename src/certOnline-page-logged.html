@@ -204,7 +204,7 @@
 
     <div class="flex justify-around items-center w-screen h-14 bg-F5F5F5 shadow-md text-black font-bold text-2xl">
         <button id="backButton" class="w-14 h-10 text-white hover:scale-105 transition-transform">
-            <img class="w-8 h-8" src="assets/images/icon-Back.png">
+            <img alt="Boton para regresar a la pantalla principal" class="w-8 h-8" src="assets/images/icon-Back.png">
         </button>
         <div class="flex-grow text-center">Certificado en Línea
           <div class="text-gray-400 text-center text-sm">Este trámite es totalmente gratuito</div>
@@ -226,9 +226,11 @@
     <div class="w-56 h-80 bg-F5F5F5 p-4 py-9 rounded shadow-md flex flex-col items-center">
         <img class="w-20 h-20" src="assets/images/iconCertificated.png" alt="Icono de un certificado">
         <span class="m-4 text-black font-bold text-center">Certificado No Adeudar</span>
-        <button id="Descargar" class="mt-2 w-40 h-12 bg-242D5F rounded-full shadow-md text-white font-semibold hover:scale-105 transition-transform hover:bg-4A74A3">
+        <button id="button-descargar-noadeudar" class="mt-2 w-40 h-12 bg-242D5F rounded-full shadow-md text-white font-semibold hover:scale-105 transition-transform hover:bg-4A74A3">
             <span class="text-sm">Descargar Certificado</span>
         </button>
+        <!-- Enlace oculto para la descarga -->
+        <a title="Enlace para descargar el certificado de No Adeudar" id="downloadLink" href="#" download="certificado.pdf" style="display: none;"></a>
     </div>
 
 
@@ -236,12 +238,12 @@
     <div class="w-56 h-80 bg-F5F5F5 p-4 py-9 rounded shadow-md flex flex-col items-center">
         <img class="w-20 h-20" src="assets/images/iconCertificated.png" alt="Icono de un certificado">
         <span class="m-4 text-black font-bold text-center">Certificado Bienes Inmuebles</span>
-        <!-- Aquí se muestra el botón "Ir a certificado" solo cuando está logueado -->
 
-        <!-- Aquí se muestra el botón "Descargar Gratis" solo cuando está logueado -->
-        <button id="Descargar" class="mt-2 w-40 h-12 bg-242D5F rounded-full shadow-md text-white font-semibold hover:scale-105 transition-transform hover:bg-4A74A3">
+        <button id="button-descargar-bienes" class="mt-2 w-40 h-12 bg-242D5F rounded-full shadow-md text-white font-semibold hover:scale-105 transition-transform hover:bg-4A74A3">
             <span class="text-sm">Descargar Certificado</span>
         </button>
+        <!-- Enlace oculto para la descarga -->
+        <a title="Enlace para descargar el certificado de Bienes" id="downloadLink" href="#" download="certificado.pdf" style="display: none;"></a>
     </div>
 </div>
 
@@ -307,8 +309,19 @@
           <img class="w-24 h-24" src="assets/images/ChatBot.png" alt="Un robot dentro de un boton rojo">
       </button>
       </div>
- 
 
+  <script>
+    const descargarBtn = document.getElementById('button-descargar-noadeudar');
+    const downloadLink = document.getElementById('downloadLink');
+
+    // Agregar un escucha de eventos para el botón de descarga
+    descargarBtn.addEventListener('click', function() {
+        // Simular la descarga al establecer el atributo "href" del enlace oculto
+        downloadLink.setAttribute('href', 'certificadoejemplo.pdf'); 
+        // Simular un clic en el enlace oculto
+        downloadLink.click();
+    });
+</script>
 </body>
 
 </html>

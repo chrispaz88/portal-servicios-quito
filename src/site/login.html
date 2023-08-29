@@ -41,7 +41,7 @@
                             <h1 class="pl-32 text-center text-white font-semibold text-2xl">INICIAR SESION</h1>
                         </div>
                         <div class="h-5/6">
-                            <form class="px-6">
+                            <form id="form-login" class="px-6">
                                 <div class="mb-4">
                                     <label for="cedulaRuc" class="block text-1xl font-medium text-white">CEDULA O RUC</label>
                                     <input type="number" id="cedulaRuc" name="cedulaRuc" placeholder="  1752460590" class="mt-1 block h-11 w-full rounded-md border-gray-100 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 px-5 appearance-none" minlength="10" maxlength="13" required>
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="md:justify-between flex max-md:flex-col justify-center items-center text-center space-y-4">
                                     <a href="#" class="text-E3C34D font-semibold hover:text-red-500">Crear Cuenta</a>
-                                    <button id="login-button" type="submit" class="bg-indigo-700 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 font-semibold">Iniciar Sesion</button>
+                                    <button id="login-button" type="submit" class="bg-indigo-700 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 font-semibold" >Iniciar Sesion</button>
                                 </div>
                             </form>
                         </div>
@@ -101,10 +101,17 @@
         }
     });
 
-    const certificadoButton = document.getElementById('login-button');
-    certificadoButton.addEventListener('click', () => {
+    function goPageLogged() {
         window.location.href = '../certOnline-page-logged.html';
-    });
+    };
+    let formlogin = document.getElementById('form-login');
+
+    formlogin.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevenir el envío predeterminado del formulario
+
+        // Si la validación es exitosa, redireccionar a otro sitio
+        goPageLogged();
+});
 
 
 

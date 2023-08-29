@@ -304,25 +304,7 @@
       </button>
       </div>
  
-      <script>
-        // Verificar el estado de inicio de sesión en localStorage al cargar la página
-        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-        updateButtonVisibility(isLoggedIn);
 
-        // Función para mostrar u ocultar los botones dependiendo del estado de inicio de sesión
-        function updateButtonVisibility(isLoggedIn) {
-            const irCertificadoButtons = document.querySelectorAll('#IrCertificado');
-            const descargarButtons = document.querySelectorAll('#Descargar');
-
-            // Mostrar o ocultar botones dependiendo del estado de inicio de sesión
-            irCertificadoButtons.forEach(button => {
-                button.style.display = isLoggedIn ? 'block' : 'none';
-            });
-            descargarButtons.forEach(button => {
-                button.style.display = isLoggedIn ? 'none' : 'block';
-            });
-        }
-    </script>
 </body>
 
 </html>

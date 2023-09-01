@@ -122,7 +122,7 @@
     }
   </style>
   
-  <a href="index.html" class="image-link">
+  <a href="../index.html" class="image-link">
     <img src="assets/images/Logo-Portal.png" alt="Logo del Municipio Metropolitano de Quito" class="me-3">
   </a>
 
@@ -211,6 +211,12 @@
         <div class="w-14 h-10"></div> <!-- Espacio en blanco para ajustar el centrado -->
     </div>
     
+    <script>
+      const BackButton = document.getElementById('backButton');
+      BackButton.addEventListener('click', () => {
+          window.location.href = '../index.html';
+      });
+    </script>
     
   
    <div class="flex space-x-4 justify-center mt-4">

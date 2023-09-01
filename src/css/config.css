@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .opcNavMenuEffect {
+    @apply border-r border-white transition-all duration-300 hover:bg-4A74A3;
+  }
+  .bg-image-transform {
+    transform: skewY(-15deg);
+    z-index: -1;
+  }
+  .triangulo-equilatero-bottom-right {
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-left: 100vw solid #FFFDFD;
+    border-top: 50vw solid #FFFDFD;
+    border-right: 0vw solid transparent;
+    border-bottom: 50vw solid transparent;
+    z-index: -1;
+  }
+
+}

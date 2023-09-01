@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Servicios de Quito</title>
+    <link rel="icon" href="./assets/images/iconLink.png" type="image/png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="./js/toglgle.js"></script>
+</head>
+<body>
+  <div class="flex justify-end mt-20 me-3 space-x-2 absolute top-0 right-0">
+    <button type="button" title="Boton de Traductor" id="traductorBut" class="w-14 h-14 bg-red-500 text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform" alt="Botón para traducir en Español, Kwicha e Inglés">
+        <img class="w-10 h-10" src="assets/images/iconTraductor.png" alt="Icono de Traductor">
+    </button>
+    <button type="button" title="Boton de Accesibilidad" id="accessBut" class="w-14 h-14 bg-red-500 text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform" alt="Botón para cambiar el contraste o cambiar el tamaño de letra">
+        <img class="w-24 h-16" src="assets/images/iconperson.png" alt="Icono de Accesibilidad">
+    </button>
+    <button type="button" title="Boton PAra Activar el Sonido Alternativo" id="leerBut" class="w-14 h-14 bg-red-500 text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform" alt="Botón para activar el lector de pantalla de la página">
+      <img id="iconImage" class="w-10 h-10" src="assets/images/iconMute.png" alt="Icono de Sonido Silenciado">   
+  </button>
+      
+      <script>
+          const iconImage = document.getElementById('iconImage');
+          const leerButton = document.getElementById('leerBut');
+          let isMuted = true;
+      
+          iconImage.addEventListener('click', () => {
+              if (isMuted) {
+                  const newImageSrc = 'assets/images/iconLeer.png';
+                  iconImage.src = newImageSrc;
+                  leerButton.classList.add('bg-blue-500');
+              } else {
+                  const originalImageSrc = 'assets/images/iconMute.png';
+                  iconImage.src = originalImageSrc;
+                  leerButton.classList.remove('bg-blue-500');
+              }
+      
+              isMuted = !isMuted;
+          });
+      </script>
+    </div>
+  </div>
+  <ul id="opctraductor" class=" hidden w-32 right-0 -translate-x-40 translate-y-28 text-black text-iek-web absolute bg-F6F6F6 opacity-90 border border-gray-300 rounded-lg group-hover:block z-10">
+    <div class="p-4">
+      <h1 class="text-black font-bold" alt="ventana para seleccionar Idioma">Idioma</h1>
+      <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+          <span style="display: flex; align-items: center;">
+              <img src="assets/images/banderaEcu.png" alt="cambiar al idioma Español" style="width: 25px; height: 20px;" />
+              <span style="margin-left: 8px;" >Español</span>
+          </span>
+      </a>
+      <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+        <span style="display: flex; align-items: center;">
+            <img src="assets/images/banderaKiwcha.png" alt="cambiar al idioma Kiwcha" style="width: 25px; height: 20px;" />
+            <span style="margin-left: 8px;">Kiwcha</span>
+        </span>
+      </a>
+      <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+        <span style="display: flex; align-items: center;">
+            <img src="assets/images/banderaUsa.png" alt="cambiar al idioma Inglés" style="width: 25px; height: 20px;" />
+            <span style="margin-left: 8px;">Inglés</span>
+        </span>
+      </a>
+      </div>
+  </ul>
+  
+  <ul id="opcAccess" class="hidden w-40 right-0 -translate-x-24 translate-y-28 text-black text-iek-web absolute bg-F6F6F6 opacity-90 border border-gray-300 rounded-lg group-hover:block z-10">
+      <div class="p-4">
+        <h1 class="text-black font-bold">Accesibilidad</h1>
+        <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+            <span style="display: flex; align-items: center;">
+                <img src="assets/images/contrastNormal.png" alt="Cambiar a contraste normal" style="width: 20px; height: 20px;" />
+                <span style="margin-left: 2px;">Contraste normal</span>
+            </span>
+        </a>
+        <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+          <span style="display: flex; align-items: center;">
+              <img src="assets/images/contrastAlto.png" alt="Cambiar a Alto contraste" style="width: 20px; height: 20px;" />
+              <span style="margin-left: 2px;">Alto contraste</span>
+          </span>
+        </a>
+        <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+          <span style="display: flex; align-items: center;">
+              <img src="assets/images/contrastNegativo.png" alt="Cambiar a Contraste negativo" style="width: 20px; height: 20px;" />
+              <span style="margin-left: 2px;">Contraste negativo</span>
+          </span>
+        </a>
+        <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+          <span style="display: flex; align-items: center;">
+              <img src="assets/images/contrastBajo.png" alt="Cambiar a Bajo contraste" style="width: 20px; height: 20px;" />
+              <span style="margin-left: 2px;">Bajo contraste</span>
+          </span>
+        </a>
+      <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+        <span style="display: flex; align-items: center;">
+            <img src="assets/images/sizeLetter.png" alt="Cambiar el tamaño del texto a texto normal" style="width: 14px; height: 14px;" />
+            <span style="margin-left: 2px;">Texto normal</span>
+        </span>
+      </a>
+      <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+        <span style="display: flex; align-items: center;">
+            <img src="assets/images/sizeLetter.png" alt="Cambiar el tamaño del texto a texto mediano" style="width: 18px; height: 18px;" />
+            <span style="margin-left: 2px;">Texto mediano</span>
+        </span>
+      </a>
+      <a class="w-full block py-2 transition-all duration-300 hover:bg-blue-100" href="#">
+        <span style="display: flex; align-items: center;">
+            <img src="assets/images/sizeLetter.png" alt="Cambiar el tamaño del texto a texto grande" style="width: 24px; height: 24px;" />
+            <span style="margin-left: 2px;">Texto grande</span>
+        </span>
+      </a>
+    </div>
+  </ul>
+
+  <header>
+
+    <style>
+      .image-link {
+        display: inline-block;
+      }
+    </style>
+    
+    <a href="../index.html" class="image-link">
+      <img src="assets/images/Logo-Portal.png" alt="Logo del Municipio Metropolitano de Quito" class="me-3">
+    </a>
+  
+      <nav class="bg-242D5F border w-screen" alt="Menu de navegación">
+          <ul class="md:flex lg:flex-auto">
+              <li class="relative group flex-1 opcNavMenuEffect">
+                  <a href="#" class="block px-4 py-9 text-center text-white font-semibold uppercase text-iek-web" alt="Opcion Institucional">Institucional</a>
+              </li>
+              <li class="relative group flex-1 opcNavMenuEffect">
+                  <a id="opctramites" href="#" class="block px-4 py-9 text-center text-white font-semibold uppercase text-iek-web
+                  transition-all duration-300" alt="Opcion Tramites">Trámites</a>
+              </li>
+              <li class="relative group flex-1 opcNavMenuEffect">
+                  <a href="#" class="block px-4 py-9 text-center text-white font-semibold uppercase text-iek-web
+                  transition-all duration-300 hover:bg-4A74A3 hover:text-white" alt="Opcion denuncias Quito">Denuncias Quito Honesto</a>
+              </li>
+              </li>
+              <li class="relative group flex-1 opcNavMenuEffect">
+                  <a href="#" class="block px-4 py-9 text-center text-white font-semibold uppercase text-iek-web
+                  transition-all duration-300 hover:bg-4A74A3 hover:text-white" alt="Opcion Municipio en tu barrio">Municipio en tu Barrio</a>
+              </li>
+              <li class="relative group flex-1 opcNavMenuEffect">
+                  <a href="#" class="block px-4 py-9 text-center text-white font-semibold uppercase text-iek-web 
+                  transition-all duration-300 hover:bg-4A74A3 hover:text-white" alt="Opcion guias de usuario">Guías de Usuario</a>
+              </li>
+          </ul>
+           <ul id="subopctramites" class="hidden w-1/2 translate-x-16 text-black text-iek-web absolute bg-F6F6F6 opacity-90 border border-gray-300 rounded-lg group-hover:block z-10" alt="Submenu de opciones de tramites">
+              <div class="flex flex-wrap -mx-4 p-4">
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Consulta de Obligaciones">Consulta de Obligaciones</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Pago con tarjeta de Crédito">Pago con tarjeta de Crédito</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Lugares de pago Impuesto Predial 2023">Lugares de pago Impuesto Predial 2023</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Exoneración de Impuesto Predial para Personas Adultas">Exoneración de Impuesto Predial para Personas Adultas</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Facilidades de Pago">Facilidades de Pago</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="certOnline-page.html" title="Certificados en Línea">Certificados en Línea</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Consulta de Trámites en Línea">Consulta de Trámites en Línea</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Presentación de Acuerdo de Responsabilidad y uso de medios electrónicos">Presentación de Acuerdo de Responsabilidad y uso de medios electrónicos</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="LUAE Digital">LUAE Digital</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Declaración en Línea Patente y 1.5 x mil">Declaración en Línea Patente y 1.5 x mil</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Transferencia de dominio">Transferencia de dominio</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Sistema Sitra">Sistema Sitra</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Consulta de recaudaciones bancarias">Consulta de recaudaciones bancarias</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Incremento de Pisos">Incremento de Pisos</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Informe de Regulación Metropolitana (IRM) - Cédula Catastral">Informe de Regulación Metropolitana (IRM) - Cédula Catastral</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Informe de Compatibilidad de Uso de Suelo(ICUS)">Informe de Compatibilidad de Uso de Suelo(ICUS)</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Emisión Automática de Informes de Accidentes">Emisión Automática de Informes de Accidentes</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Validador Propiedad Horizontal">Validador Propiedad Horizontal</a>
+                <a class="w-full md:w-1/4 lg:w-1/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Anexos de Reclamos o Peticiones Administrativas">Anexos de Reclamos o Peticiones Administrativas</a>
+                <a class="w-full md:w-4/4 lg:w-4/4 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Verificación de Documentos Emitidos">Verificación de Documentos Emitidos</a>
+                <a class="w-full md:w-1/3 lg:w-1/3 px-4 py-2 transition-all duration-300 hover:bg-blue-100" href="#" title="Sistema Metropolitano de Seguimiento de Recomendaciones">Sistema Metropolitano de Seguimiento de Recomendaciones</a>                  
+              </div>
+          </ul>
+      </nav>  
+  </header>
+
+  <script>
+      initializeToggle("opctramites", "subopctramites");
+      initializeToggle("traductorBut", "opctraductor");
+      initializeToggle("accessBut", "opcAccess");
+      initializeToggle("leerBut", "opcLeer");
+  </script>
+
+
+  
+  <div class="container">
+      <div class="relative w-screen jus flex">
+          <img src="assets/images/panecillo.png" alt="Panecillo" class="w-screen jus" alt="Un paisaje del panecillo del el cielo y adijunto en la parte superior izquierda un sello del gobierno ecuatoriano">
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div class="flex opacity-90 ">
+                  <input type="text" class="w-96 px-4 py-2 border rounded-l-full" placeholder="Buscar trámites y servicios">
+                  <button aria-label="Aria Name" class="px-4 py-2 bg-white text-858282 font-semibold rounded-r-full flex items-center" type="button">
+                      <i class="fas fa-search"></i></span>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+    <div class="flex justify-around items-center w-screen h-14 bg-F5F5F5 shadow-md text-black font-bold text-2xl">
+        <button id="backButton" class="w-14 h-10 text-white hover:scale-105 transition-transform">
+            <img class="w-8 h-8" alt="Regresar a la pagina anterior" src="assets/images/icon-Back.png">
+        </button>
+        <div class="flex-grow text-center">Certificado en Línea
+          <div class="text-gray-700 text-center text-sm">Este trámite es totalmente gratuito</div>
+        </div>
+        <div class="w-14 h-10"></div> <!-- Espacio en blanco para ajustar el centrado -->
+    </div>
+    
+    
+    <script>
+      // Agregar un evento de clic al botón
+      const certificadoButton = document.getElementById('backButton');
+      certificadoButton.addEventListener('click', () => {
+          // Redireccionar a la página "page_tramites.html"
+          window.location.href = '../index.html';
+      });
+  </script>
+  
+   <div class="flex space-x-4 justify-center mt-4">
+    <div class="w-56 h-80 bg-F5F5F5 p-4 py-9 rounded shadow-md flex flex-col items-center">
+        <img class="w-20 h-20" src="assets/images/iconCertificated.png" alt="Icono de un certificado">
+        <span class="m-4 text-black font-bold text-center">Certificado No Adeudar</span>
+        <button id="button-descargar-noadeudar" class="mt-2 w-40 h-12 bg-242D5F rounded-full shadow-md text-white font-semibold hover:scale-105 transition-transform hover:bg-4A74A3">
+            <span class="text-sm">Descargar Certificado</span>
+        </button>
+        <!-- Enlace oculto para la descarga -->
+        <a title="Enlace para descargar el certificado de No Adeudar" id="downloadLink" href="#" download="certificado.pdf" style="display: none;"></a>
+        <p id="downloadMessage" class="flex text-center mt-2 hidden" style="color: darkgreen;">El archivo se descargó correctamente.</p>
+
+    </div>
+
+
+
+    <div class="w-56 h-80 bg-F5F5F5 p-4 py-9 rounded shadow-md flex flex-col items-center">
+        <img class="w-20 h-20" src="assets/images/iconCertificated.png" alt="Icono de un certificado">
+        <span class="m-4 text-black font-bold text-center">Certificado Bienes Inmuebles</span>
+
+        <button id="button-descargar-bienes" class="mt-2 w-40 h-12 bg-242D5F rounded-full shadow-md text-white font-semibold hover:scale-105 transition-transform hover:bg-4A74A3">
+            <span class="text-sm">Descargar Certificado</span>
+        </button>
+        <!-- Enlace oculto para la descarga -->
+        <a title="Enlace para descargar el certificado de Bienes" id="downloadLink" href="#" download="certificado.pdf" style="display: none;"></a>
+        <p id="downloadMessage2" class="flex text-center mt-2 hidden" style="color: darkgreen;">El archivo se descargó correctamente.</p>
+      </div>
+</div>
+
+      <section>
+        <div class="flex justify-center items-center mt-4">
+            <div class="bg-0D2BD2 p-1 w-1/3"></div>
+            <div class="bg-E3292F p-1 w-1/3"></div>
+            <div class="bg-0D2BD2 p-1 w-1/3"></div>
+        </div>
+      </section>
+      <footer class="relative bg-cover bg-center h-full" style="background-image: url(./assets/images/backggroundfooter.jpeg);">
+        <div class="flex sm:justify-around md:justify-around lg:justify-between">
+          <div class="text-white mx-2 flex gap-4 justify-center items-start px-6 py-10 lg:mx-20">
+              <div class="col-span-1 flex flex-col items-center">
+                  <h2 class="text-lg font-semibold">Municipio</h2>
+                  <div class="bg-E3292F p-1 w-20"></div>
+                  <ul class="mt-2 text-small">
+                      <li>El Alcalde</li>
+                      <li>Integrantes Consejo Cantonal</li>
+                      <li>Ordenanzas y Reglamentos</li>
+                      <li>Politica Antisoborno</li>
+                      <li>Politica de tratamiento de datos</li>
+                  </ul>
+              </div>
+              <div class="col-span-1 flex flex-col items-center">
+                  <h2 class="text-lg font-semibold">Contacto</h2>
+                  <div class="bg-E3292F p-1 w-20"></div>
+                  <ul class="mt-2 text-small">
+                      <li>Venezuela entre Chile y Espejo</li>
+                      <li>Palacio Municipal</li>
+                      <li>Plaza Carlos Andrade Marin</li>
+                      <li>PBX: (593-2) 3952300</li>
+                      <li>Call Center 1800 520 o 101</li>
+                  </ul>
+              </div>
+              <div class="col-span-1 flex flex-col items-start">
+                  <h2 class="text-lg font-semibold">Siguenos</h2>
+                  <div class="bg-E3292F p-1 w-20"></div>
+                  <ul class="mt-2">
+                      <li>
+                        <button class="hover:scale-105 transition-transform">
+                          <img class="w-14 h-14" src="assets/images/iconWhatssap.png" alt="Icono WhatsApp">
+                        </button>
+                      </li>
+                      <li>
+                      <button class="hover:scale-105 transition-transform">
+                        <img class="w-12 h-12" src="assets/images/iconfb.png" alt="Icono Facebook">
+                      </button>
+                    </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="max-[810px]:hidden col-span-1 max-sm:w-40 sm:w-48 md:w-64 lg:w-80 mx-2 flex gap-4 justify-end items-end">
+            <div class="">
+              <img class="w-full" src="./assets/images/bannerPrincipal_2.png"  alt="Logo de Servicios Ciudadanos de la alcaldia de Quito">
+            </div>  
+          </div>
+        </div>
+      </footer>
+
+      <div class="relative flex justify-end items-end">
+        <button id="chatbotBut" class="fixed bottom-4 right-4 rounded-full hover:scale-105 transition-transform">
+          <img class="w-24 h-24" src="assets/images/ChatBot.png" alt="Un robot dentro de un boton rojo">
+      </button>
+      </div>
+
+  <script>
+    const descargarBtn = document.getElementById('button-descargar-noadeudar');
+    const descargarBtn2 = document.getElementById('button-descargar-bienes');
+    const downloadLink = document.getElementById('downloadLink');
+
+    const downloadMessage = document.getElementById('downloadMessage');
+    const downloadMessage2 = document.getElementById('downloadMessage2');
+
+
+    // Agregar un escucha de eventos para el botón de descarga
+    descargarBtn.addEventListener('click', function() {
+        // Simular la descarga al establecer el atributo "href" del enlace oculto
+        downloadLink.setAttribute('href', 'certificadoejemplo.pdf'); 
+        // Simular un clic en el enlace oculto
+        downloadLink.click();
+        // Mostrar el mensaje de descarga exitosa
+        downloadMessage.classList.remove('hidden');
+    });
+
+    descargarBtn2.addEventListener('click', function() {
+        // Simular la descarga al establecer el atributo "href" del enlace oculto
+        downloadLink.setAttribute('href', 'certificadoejemplo.pdf'); 
+        // Simular un clic en el enlace oculto
+        downloadLink.click();
+        // Mostrar el mensaje de descarga exitosa
+        downloadMessage2.classList.remove('hidden');
+
+    });
+</script>
+</body>
+
+</html>

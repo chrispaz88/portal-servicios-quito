@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesion</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body class="overflow-hidden bg-cover" style="background-image: url('../assets/images/login-background.jpeg');">
+  <main class="relative h-screen">
+    <section class="triangulo-equilatero-bottom-right"></section>
+    <section class="absolute inset-0 flex">
+        <section class="flex items-start w-1/5">
+            <div class="justify-center items-center mt-0">
+                <img src="../assets/images/Logo-Portal.png" alt="Logo del Municipio Metropolitano de Quito" class="me-3" style="min-width: 50px; min-height: 50px;">
+            </div>
+        </section>
+        <section id='contenedor-login' class="flex justify-center items-center flex-col max-w-4xl w-3/5">
+            <div class="h-1/6"></div>
+            <div class="h-5/6 w-full flex justify-center items-center">      
+                <div class="md:mx-auto md:w-full h-full w-full mx-0 md:w-3/5 lg:max-w-3xl bg-blue-950 border border-solid border-gray-600 rounded-lg">
+                    <div class="flex flex-col h-full items-center">
+                        <div class="flex h-1/6 w-full py-10">
+                            <a href="../../index.html">
+                                <svg alt="Regresar a home" class="mx-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" fill="none">
+                                    <g clip-path="url(#clip0_39_1800)">
+                                    <path d="M6 32C6 25.1044 8.73928 18.4912 13.6152 13.6152C18.4912 8.73928 25.1044 6 32 6C38.8956 6 45.5088 8.73928 50.3848 13.6152C55.2607 18.4912 58 25.1044 58 32C58 38.8956 55.2607 45.5088 50.3848 50.3848C45.5088 55.2607 38.8956 58 32 58C25.1044 58 18.4912 55.2607 13.6152 50.3848C8.73928 45.5088 6 38.8956 6 32ZM64 32C64 23.5131 60.6286 15.3737 54.6274 9.37258C48.6263 3.37142 40.4869 0 32 0C23.5131 0 15.3737 3.37142 9.37258 9.37258C3.37142 15.3737 0 23.5131 0 32C0 40.4869 3.37142 48.6263 9.37258 54.6274C15.3737 60.6286 23.5131 64 32 64C40.4869 64 48.6263 60.6286 54.6274 54.6274C60.6286 48.6263 64 40.4869 64 32ZM27.175 47.1125C27.7 47.675 28.4375 48 29.2125 48C30.75 48 32 46.75 32 45.2125V38H44C46.2125 38 48 36.2125 48 34V30C48 27.7875 46.2125 26 44 26H32V18.7875C32 17.25 30.75 16 29.2125 16C28.4375 16 27.7 16.325 27.175 16.8875L14.6875 30.275C14.25 30.75 14 31.3625 14 32C14 32.6375 14.25 33.2625 14.6875 33.725L27.175 47.1125Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_39_1800">
+                                        <rect width="64" height="64" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </a>
+                            <h1 class="pl-32 text-center text-white font-semibold text-2xl">INICIAR SESION</h1>
+                        </div>
+                        <div class="h-5/6">
+                            <form id="form-login" class="px-6">
+                                <div class="mb-4">
+                                    <label for="cedulaRuc" class="block text-1xl font-medium text-white">CEDULA O RUC</label>
+                                    <input type="number" id="cedulaRuc" name="cedulaRuc" placeholder="  1752460590" class="mt-1 block h-11 w-full rounded-md border-gray-100 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 px-5 appearance-none" minlength="10" maxlength="13" required>
+                                </div>
+
+                                <div class="mb-4 relative">
+                                    <label for="password" class="block text-1xl font-medium text-white">CONTRASEÑA</label>
+                                    <input type="password" id="password" name="password" placeholder="  Contraseña" class="mt-1 block h-11 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-100 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 px-5 pr-12" required>
+                                    <button title="Ver password" type="button" id="togglePassword" class="absolute pt-7 inset-y-0 right-3 flex items-center text-white">
+                                        <i class="far fa-eye text-gray-500 cursor-pointer"></i>
+                                    </button>
+                                </div>
+
+                                <div class="mb-4 flex items-center justify-center mt-12 text-center">
+                                    <a href="#" class="block text-1xl font-medium text-E3C34D hover:text-red-500">¿Olvidó su contraseña?</a>
+                                </div>
+                                <div class="mb-4 flex items-center justify-center text-center">
+                                    <a href="#" class="block text-1xl font-medium text-E3C34D hover:text-red-500">¿Olvidó su correo electrónico?</a>
+                                </div>
+                                <div class="md:justify-between flex max-md:flex-col justify-center items-center text-center space-y-4">
+                                    <a href="#" class="text-E3C34D font-semibold hover:text-red-500">Crear Cuenta</a>
+                                    <button id="login-button" type="submit" class="bg-indigo-700 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 font-semibold" >Iniciar Sesion</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="h-1/6"></div>
+        </section>
+        <section class="flex justify-center items-start w-1/5">
+            <div class="flex justify-end space-x-2 absolute top-0 right-0 mt-5 mr-5">
+                <button   id="traductorBut" class="w-10 h-10 bg-red-500 text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform">
+                    <img alt="Icono de traductor" class="w-7 h-8" src="../assets/images/iconTraductor.png">
+                </button>
+                <button  id="accessBut" class="w-10 h-10 bg-red-500 text-white rounded-full flex items-center justify-center hover:scale-105 transition-transform">
+                    <img alt="Icono de un persona simboliza accesibilidad" class="w-12 h-12" src="../assets/images/iconperson.png">
+                </button>
+            </div>    
+        </section>
+    </section>
+
+  </main>
+  <script>
+    const togglePasswordButton = document.getElementById("togglePassword");
+    const passwordInput = document.getElementById("password");
+
+
+    togglePasswordButton.addEventListener("click", function () {
+        if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        togglePasswordButton.innerHTML = '<i class="far fa-eye-slash text-gray-500 cursor-pointer"></i>';
+        } else {
+        passwordInput.type = "password";
+        togglePasswordButton.innerHTML = '<i class="far fa-eye text-gray-500 cursor-pointer"></i>';
+        }
+    });
+
+    function goPageLogged() {
+        window.location.href = '../certOnline-page-logged.html';
+    };
+    let formlogin = document.getElementById('form-login');
+
+    formlogin.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevenir el envío predeterminado del formulario
+
+        // Si la validación es exitosa, redireccionar a otro sitio
+        goPageLogged();
+});
+
+
+
+  </script>
+</body>
+</html>

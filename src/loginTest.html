@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulación de Botón de Inicio de Sesión</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simulación de Botón de Inicio de Sesión</h1>
+  
+  <div id="login-container">
+    <button id="login-button" onclick="toggleLoginState()">Iniciar Sesión</button>
+    <p id="login-status">No has iniciado sesión.</p>
+  </div>
+
+  <script>
+    const certificadoButton = document.getElementById('login-button');
+    certificadoButton.addEventListener('click', () => {
+        window.location.href = 'certOnline-page.html';
+    });
+  </script>
+  
+  <script>
+    const loginButton = document.getElementById('login-button');
+    const loginStatus = document.getElementById('login-status');
+    
+    // Verificar el estado de inicio de sesión en localStorage al cargar la página
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    updateLoginStatus(isLoggedIn);
+    
+    function toggleLoginState() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      localStorage.setItem('isLoggedIn', isLoggedIn ? 'false' : 'true');
+      updateLoginStatus(!isLoggedIn);
+    }
+    
+    function updateLoginStatus(isLoggedIn) {
+      if (isLoggedIn) {
+        loginButton.textContent = 'Cerrar Sesión';
+        loginStatus.textContent = 'Has iniciado sesión.';
+      } else {
+        loginButton.textContent = 'Iniciar Sesión';
+        loginStatus.textContent = 'No has iniciado sesión.';
+      }
+    }
+
+    // Actualizar el texto del botón según el estado de inicio de sesión
+    const isLoggedInOnLoad = localStorage.getItem('isLoggedIn') === 'true';
+    const certificadoButtonText = isLoggedInOnLoad ? 'Descargar certificado' : 'Ir a certificado';
+    certificadoButton.textContent = certificadoButtonText;
+  </script>
+</body>
+</html>
